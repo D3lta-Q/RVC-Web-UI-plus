@@ -820,7 +820,8 @@ with gr.Blocks(title="RVC WebUI") as app:
                         resample_sr0 = gr.Slider(
                             minimum=0,
                             maximum=48000,
-                            label=i18n(
+                            label=i18n("Resample"),
+                            info=i18n(
                                 "Resample the output audio in post-processing to the final sample rate. Set to 0 for no resampling"
                             ),
                             value=0,
@@ -830,7 +831,8 @@ with gr.Blocks(title="RVC WebUI") as app:
                         rms_mix_rate0 = gr.Slider(
                             minimum=0,
                             maximum=1,
-                            label=i18n(
+                            label=i18n("RMS Mix Rate"),
+                            info=i18n(
                                 "Adjust the volume envelope scaling. Closer to 0, the more it mimicks the volume of the original vocals. Can help mask noise and make volume sound more natural when set relatively low. Closer to 1 will be more of a consistently loud volume"
                             ),
                             value=0.25,
@@ -839,7 +841,8 @@ with gr.Blocks(title="RVC WebUI") as app:
                         protect0 = gr.Slider(
                             minimum=0,
                             maximum=0.5,
-                            label=i18n(
+                            label=i18n("Protect"),
+                            info=i18n(
                                 "Protect voiceless consonants and breath sounds to prevent artifacts such as tearing in electronic music. Set to 0.5 to disable. Decrease the value to increase protection, but it may reduce indexing accuracy"
                             ),
                             value=0.33,
@@ -849,7 +852,8 @@ with gr.Blocks(title="RVC WebUI") as app:
                         filter_radius0 = gr.Slider(
                             minimum=0,
                             maximum=7,
-                            label=i18n(
+                            label=i18n("Filter Radius"),
+                            info=i18n(
                                 "If >=3: apply median filtering to the harvested pitch results. The value represents the filter radius and can reduce breathiness."
                             ),
                             value=3,
