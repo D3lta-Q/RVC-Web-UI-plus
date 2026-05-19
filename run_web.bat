@@ -1,2 +1,3 @@
-py -3.10 web.py --update
+call .venv\Scripts\activate
+py web.py --update
 pause
